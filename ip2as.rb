@@ -15,7 +15,7 @@ def scan_line(line)
       as = ( as_arr.uniq.size>1 ?  as_arr[0]+'*' : as_arr[0] )
       if (/^AS/ =~ as)
 #        replacement = sprintf("%-#{word.bytesize}s", "[#{as}]")
-        replacement = sprintf("%s", "[#{as}]")
+        replacement = sprintf("%s", "\033[31m[#{as}]\033[0m")
       else
         replacement = word
       end
